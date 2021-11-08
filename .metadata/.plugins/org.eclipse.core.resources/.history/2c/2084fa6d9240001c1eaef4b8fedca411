@@ -1,0 +1,8 @@
+package com.reduceexample;
+
+public class ReduceExample {
+
+	public static void main(String[] args) {
+		
+	}
+}
