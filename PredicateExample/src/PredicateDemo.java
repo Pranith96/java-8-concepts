@@ -1,23 +1,22 @@
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.Predicate;
 
-public class PredicateDemo { /*
-								 * implements Predicate<Integer> {
-								 * 
-								 * public boolean test(Integer t) { if (t % 2 == 0) { return true; } return
-								 * false; }
-								 */
+public class PredicateDemo { /* implements Predicate<Integer> {
+
+	public boolean test(Integer t) {
+		if (t % 2 == 0) {
+			return true;
+		}
+		return false;
+	}*/
 
 	public static void main(String[] args) {
 
-		/*
-		 * PredicateDemo predicateDemo = new PredicateDemo(); boolean response =
-		 * predicateDemo.test(4);
-		 * 
-		 * System.out.println(response);
-		 */
+		//PredicateDemo predicateDemo = new PredicateDemo();
+		//boolean response = predicateDemo.test(4);
 
+		//System.out.println(response);
+
+		// 1st
 		Predicate<Integer> data = (t) -> {
 			if (t % 2 == 0) {
 				return true;
@@ -25,8 +24,9 @@ public class PredicateDemo { /*
 			return false;
 		};
 
-		Predicate<Integer> response = t -> t % 2 == 0;
-		response.test(6);
+		//2nd
+		Predicate<Integer> response2 = t -> t % 2 == 0;
+		response2.test(6);
 	}
 
 //	public void data() {

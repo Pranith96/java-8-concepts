@@ -12,5 +12,4 @@ public class SupplierExample1 {
 		System.out.println(supplier2.get());
 		System.out.println(supplier3.get());
 	}
-
 }
