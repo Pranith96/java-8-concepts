@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.student.model.Student;
@@ -43,6 +44,12 @@ public class StudentController {
 	@GetMapping("/get/details/name/{studentName}")
 	public ResponseEntity<List<Student>> getDetails(@PathVariable("studentName") String studentName) {
 		List<Student> response = studentService.getDetailsByName(studentName);
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
+	
+	@GetMapping("/get/data")
+	public ResponseEntity<Student> getStudentDetails(@RequestParam("studentId") Integer studentId) {
+		Student response = studentService.getDetailsById(studentId);
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 }

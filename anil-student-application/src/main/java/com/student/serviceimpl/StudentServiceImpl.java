@@ -45,7 +45,8 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public List<Student> getDetailsByName(String studentName) {
-		List<Student> response = studentRepository.findByStudentName(studentName);
+		//List<Student> response = studentRepository.findByStudentName(studentName);
+		List<Student> response = studentRepository.getByStudentName(studentName);
 		if (response == null || response.isEmpty()) {
 			throw new RuntimeException("Data is empty");
 		}
